@@ -1,7 +1,7 @@
 {
-  "name": "peri-weather-app",
+  "name": "peri-weatherapp",
   "version": "1.0.0",
-  "description": "Redo from the previous file since the preview stopped working",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
