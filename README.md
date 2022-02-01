@@ -1,4 +1,4 @@
 # Peri-WeatherApp
 
-Created with CodeSandbox
-Testing this file
+First project
+It was built using Javascript, HTML, CSS, APIs, and Bootsrap on CodeSandbox.
