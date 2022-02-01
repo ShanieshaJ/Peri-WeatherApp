@@ -1,0 +1,141 @@
+/* CSS for the weather application */
+
+body {
+  color: #0d0628;
+  background: #d9dbf1;
+}
+
+.date {
+  margin: 0 auto;
+  font-size: 20px;
+}
+
+.weather-type {
+  margin: 0 auto;
+}
+
+#celsius,
+#fahrenheit {
+  color: #0d0628;
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.temperature {
+  position: relative;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+.cloudSunRain-icon {
+  color: blanchedalmond;
+  position: relative;
+  padding: 20px;
+  font-size: 70px;
+}
+
+.city {
+  font-size: 20px;
+}
+
+.row-5 {
+  padding: 10px;
+}
+
+.col {
+  padding: 10px;
+}
+
+#search-city,
+#current-location {
+  margin: auto;
+}
+
+#search-city {
+  display: flex;
+  color: #272838;
+  box-shadow: 0 0 20px #d9dbf1;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #8e9dcc;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  background: linear-gradient(0deg, #7d84b2 0%, #7d84b2 100%);
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-city:hover {
+  background: #d9dbf1;
+  background: linear-gradient(0deg, #d9dbf1 0%, #d9dbf1 100%);
+}
+
+#current-location {
+  color: #272838;
+  box-shadow: 0 0 20px #d9dbf1;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #8e9dcc;
+  display: flex;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+  background: linear-gradient(315deg, #7d84b2 0%, #7d84b2 74%);
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+#current-location:hover {
+  color: #020108;
+}
+
+.container {
+  background: linear-gradient(91.3deg, #7d84b2 1.5%, #d9dbf1 100.3%);
+  border: #8e9dcc solid 2px;
+  box-shadow: 12px 12px 2px 1px #7d84b2, 0.2;
+  border-radius: 50px;
+  font-weight: 600;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+}
+
+.weather-card-two {
+  position: relative;
+  margin: 0 auto;
+  top: 5px;
+}
+
+.city-entry {
+  background-color: #d9dbf1;
+  border-radius: 10px;
+  border: #8e9dcc solid 2px;
+  height: 40px;
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  align-content: stretch;
+  flex-wrap: nowrap;
+}
+
+ul.weather-parameters {
+  font-size: 17px;
+}
