@@ -139,3 +139,14 @@ li {
 ul.weather-parameters {
   font-size: 17px;
 }
+
+#developerFooter {
+  position: relative;
+  margin: 0 auto;
+  top: 2rem;
+  left: 3rem;
+}
+
+#projectLink {
+  text-decoration: none;
+}
