@@ -41,6 +41,8 @@ body {
   position: relative;
   padding: 20px;
   font-size: 70px;
+  margin: 0 auto;
+  right: 30px;
 }
 
 .city {
