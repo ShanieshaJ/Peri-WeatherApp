@@ -27,6 +27,7 @@ body {
   text-decoration: none;
   margin: 0 auto;
   font-size: 30px;
+  position: absolute;
 }
 
 .temperature {
