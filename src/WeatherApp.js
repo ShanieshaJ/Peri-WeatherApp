@@ -31,14 +31,15 @@ function displayCurrentWeatherReport(response) {
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   let currentWeatherDescription = document.querySelector(".weather-type");
   currentWeatherDescription.innerHTML = response.data.weather[0].description;
+
+  //Currently in process of trying to fix the ongoing bug in this section
   let currentWeatherIcon = document.querySelectorAll("#weatherIcon");
   currentWeatherIcon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentWeatherIcon.setAttribute("alt", currentWeatherDescription);
-  displayPosition(response.data.coords);
-  console.log(response);
+  //console.log(response);
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)
@@ -73,7 +74,7 @@ function showCurrentFormatTime(date) {
   let currDay = date.getDay();
   let currDateNumber = date.getDate();
 
-  return `${sevenDays[currDay]}, ${month} ${currDateNumber}, ${currentHour}:${currentMinutes}`;
+  return `${sevenDays[currDay]}, ${month} ${currDateNumber} ${currentHour}:${currentMinutes}`;
 }
 
 /*Show the current time and day*/
