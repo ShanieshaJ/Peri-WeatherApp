@@ -34,10 +34,10 @@ function displayCurrentWeatherReport(response) {
   let currentWeatherIcon = document.querySelectorAll("#weatherIcon");
   currentWeatherIcon.setAttribute(
     "src",
-    `https://api.openweather.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://api.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentWeatherIcon.setAttribute("alt", response.data.weather[0].description);
-  //console.log(response);
+  console.log(response);
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)

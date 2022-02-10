@@ -15,7 +15,8 @@ body {
 }
 
 #celsius,
-#fahrenheit {
+#fahrenheit,
+#currentWeatherUpdate {
   color: #0d0628;
   text-decoration: none;
   margin: 0 auto;
