@@ -38,8 +38,7 @@ function displayCurrentWeatherReport(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}2x.png`
   );
-  currentWeatherIcon.setAttribute("alt", currentWeatherDescription);
-  //console.log(response);
+  currentWeatherIcon.setAttribute("alt", response.data.weather.description);
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)
