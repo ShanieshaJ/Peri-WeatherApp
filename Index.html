@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="src/styles.css" type="text/css" />
   </head>
   <body>
+    <!--- The weather form --->
     <div class="container p-5 mt-3 rounded">
       <div class="col">
         <form class="search-weather">
@@ -38,18 +39,18 @@
           </div>
         </form>
       </div>
-
+      <!--- The temperature infomation --->
       <div class="row">
         <div class="col">
           <div class="top">
             <div class="col">
               <div class="row-6">
                 <ul>
-                  <li><span class="date"></span></li>
+                  <li>Last updated on: <span class="date"></span></li>
                   <li>
                     <i class="fas fa-map-marker"></i> <span class="city"></span>
                   </li>
-                  <i class="fas fa-cloud-sun-rain cloudSunRain-icon"></i>
+                  <img src="" alt="" id="weatherIcon" />
                   <li>
                     <span class="temperature"></span>
                     <a href="#" id="temperatureCircle">º</a>
@@ -63,7 +64,7 @@
           </div>
         </div>
       </div>
-
+      <!--- The weather infomation --->
       <div class="row">
         <div class="col">
           <div class="weather-card-two">
