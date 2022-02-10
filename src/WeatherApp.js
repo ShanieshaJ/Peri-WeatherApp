@@ -30,7 +30,13 @@ function displayCurrentWeatherReport(response) {
   let currentWind = document.querySelector("#wind");
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   let currentWeatherDescription = document.querySelector(".weather-type");
-  currentWeatherDescription.innerHTML = response.data.weather[0].main;
+  currentWeatherDescription.innerHTML = response.data.weather[0].description;
+  let currentWeatherIcon = document.querySelectorAll("#weatherIcon");
+  currentWeatherIcon.setAttribute(
+    "src",
+    `https://api.openweather.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  currentWeatherIcon.setAttribute("alt", response.data.weather[0].description);
   //console.log(response);
 }
 

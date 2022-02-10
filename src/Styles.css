@@ -36,8 +36,7 @@ body {
   margin: 0 auto;
 }
 
-.cloudSunRain-icon {
-  color: blanchedalmond;
+#weatherIcon {
   position: relative;
   padding: 20px;
   font-size: 70px;
