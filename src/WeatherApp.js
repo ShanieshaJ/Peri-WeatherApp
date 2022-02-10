@@ -33,10 +33,10 @@ function displayCurrentWeatherReport(response) {
   currentWeatherDescription.innerHTML = response.data.weather[0].description;
 
   //Currently in process of trying to fix the ongoing bug in this section
-  let currentWeatherIcon = document.querySelectorAll("#weatherIcon");
+  let currentWeatherIcon = document.querySelector("#weatherIcon");
   currentWeatherIcon.setAttribute(
     "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}2x.png`
   );
   currentWeatherIcon.setAttribute("alt", currentWeatherDescription);
   //console.log(response);
