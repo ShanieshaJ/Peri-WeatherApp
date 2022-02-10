@@ -34,9 +34,10 @@ function displayCurrentWeatherReport(response) {
   let currentWeatherIcon = document.querySelectorAll("#weatherIcon");
   currentWeatherIcon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  currentWeatherIcon.setAttribute("alt", response.data.weather[0].description);
+  currentWeatherIcon.setAttribute("alt", currentWeatherDescription);
+  displayPosition(response.data.coords);
   console.log(response);
 }
 
@@ -71,9 +72,8 @@ function showCurrentFormatTime(date) {
   let month = months[date.getMonth()];
   let currDay = date.getDay();
   let currDateNumber = date.getDate();
-  let currYear = date.getFullYear();
 
-  return `${sevenDays[currDay]}, ${month} ${currDateNumber}, ${currYear} ${currentHour}:${currentMinutes}`;
+  return `${sevenDays[currDay]}, ${month} ${currDateNumber}, ${currentHour}:${currentMinutes}`;
 }
 
 /*Show the current time and day*/
