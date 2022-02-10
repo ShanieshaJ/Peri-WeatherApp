@@ -1,8 +1,24 @@
 /* CSS for the weather application */
 
+/* Border and background of the application */
+.container {
+  background: linear-gradient(91.3deg, #7d84b2 1.5%, #d9dbf1 100.3%);
+  border: #8e9dcc solid 2px;
+  box-shadow: 10px 10px 25px 7px #7d84b2;
+  font-weight: 600;
+  margin: 0 auto;
+  position: relative;
+  top: 20px;
+  max-width: 800px;
+}
+
+/* Text of the weather application */
 body {
   color: #0d0628;
   background: #d9dbf1;
+}
+.city {
+  font-size: 20px;
 }
 
 .date,
@@ -13,8 +29,18 @@ body {
 
 .weather-type {
   margin: 0 auto;
+  text-transform: capitalize;
 }
 
+li {
+  list-style: none;
+}
+
+ul.weather-parameters {
+  font-size: 17px;
+}
+
+/* Temperature text and style */
 #celsius,
 #fahrenheit {
   color: #0d0628;
@@ -37,26 +63,7 @@ body {
   margin: 0 auto;
 }
 
-#weatherIcon {
-  position: relative;
-  padding: 20px;
-  font-size: 70px;
-  margin: 0 auto;
-  right: 30px;
-}
-
-.city {
-  font-size: 20px;
-}
-
-.row-5 {
-  padding: 10px;
-}
-
-.col {
-  padding: 10px;
-}
-
+/* Weather form and bottoms */
 #search-city,
 #current-location {
   margin: auto;
@@ -107,15 +114,12 @@ body {
   color: #020108;
 }
 
-.container {
-  background: linear-gradient(91.3deg, #7d84b2 1.5%, #d9dbf1 100.3%);
-  border: #8e9dcc solid 2px;
-  box-shadow: 10px 10px 25px 7px #7d84b2;
-  font-weight: 600;
-  margin: 0 auto;
-  position: relative;
-  top: 20px;
-  max-width: 800px;
+.row-5 {
+  padding: 10px;
+}
+
+.col {
+  padding: 10px;
 }
 
 .weather-card-two {
@@ -132,10 +136,6 @@ body {
   width: 100%;
 }
 
-li {
-  list-style: none;
-}
-
 .input-group {
   position: relative;
   display: flex;
@@ -146,10 +146,7 @@ li {
   flex-wrap: nowrap;
 }
 
-ul.weather-parameters {
-  font-size: 17px;
-}
-
+/* Footer section for the bottom of the page */
 #developerFooter {
   position: relative;
   margin: 0 auto;
