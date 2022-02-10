@@ -34,7 +34,7 @@ function displayCurrentWeatherReport(response) {
   let currentWeatherIcon = document.querySelectorAll("#weatherIcon");
   currentWeatherIcon.setAttribute(
     "src",
-    `https://api.openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   currentWeatherIcon.setAttribute("alt", response.data.weather[0].description);
   console.log(response);

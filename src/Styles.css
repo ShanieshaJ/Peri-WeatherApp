@@ -5,7 +5,8 @@ body {
   background: #d9dbf1;
 }
 
-.date {
+.date,
+#currentWeatherUpdate {
   margin: 0 auto;
   font-size: 20px;
 }
@@ -15,8 +16,7 @@ body {
 }
 
 #celsius,
-#fahrenheit,
-#currentWeatherUpdate {
+#fahrenheit {
   color: #0d0628;
   text-decoration: none;
   margin: 0 auto;
