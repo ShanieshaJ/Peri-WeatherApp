@@ -32,7 +32,7 @@ function displayCurrentWeatherReport(response) {
   let currentWeatherDescription = document.querySelector(".weather-type");
   currentWeatherDescription.innerHTML = response.data.weather[0].description;
 
-  //Currently in process of trying to fix the ongoing bug in this section
+  //To display the weather icon for each city searched
   let currentWeatherIcon = document.querySelector("#weatherIcon");
   currentWeatherIcon.setAttribute(
     "src",
@@ -81,12 +81,12 @@ let currentDateElement = document.querySelector(".date");
 currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
 
 /* Once the name of city has been entered 
-And search button has been clicked then city will be searched
-change back to current location */
+and search button has been clicked then city will be searched
+change from the current location */
 let searchUpForm = document.querySelector(".search-weather");
 searchUpForm.addEventListener("submit", getCurrentCity);
 
-/* Bonus #1 - Use Geolocation API to get the GPS coordinates
+/* Use Geolocation API to get the GPS coordinates
 Display and the city and current temperature
 change back to current location */
 function getCurrentLocation(event) {
@@ -94,7 +94,7 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(displayPosition);
 }
 
-/* Bonus #2 - Change back to current location without refreshing the page */
+/* Change back to current location without refreshing the page */
 let currentInfoButtom = document.querySelector("#current-location");
 currentInfoButtom.addEventListener("click", getCurrentLocation);
 navigator.geolocation.getCurrentPosition(displayPosition);
@@ -102,22 +102,26 @@ navigator.geolocation.getCurrentPosition(displayPosition);
 /* Display the current city without adding the text in HTML file */
 searchCityInfo("Laflèche");
 
-/*
-//let celsiusTemp = document.querySelector("#celsius");
-//let fahrenheitTemp = document.querySelector("#fahrenheit");
-//Bouns - Change the type of temperature to either celsius or fahrenheit
-function showConversionFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = 51;
-}
+/* Sixth function change the conversion to celsius by clicking */
 
 function showConversionCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = 11;
+  temperatureElement.innerHTML = currentTemperature;
 }
 
+/* Seventh function change the conversion to fahrenheit by clicking */
+function showConversionFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitConversion = (currentTemperature * 9) / 5 + 32;
+  let temperatureElement = document.querySelector(".temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitConversion);
+}
+
+/* When fahrenheit (F) is clicked it calls the function */
+let fahrenheitTemp = document.querySelector("#fahrenheit");
 fahrenheitTemp.addEventListener("click", showConversionFahrenheit);
+
+/* When celsius (C) is clicked it calls the function */
+let celsiusTemp = document.querySelector("#celsius");
 celsiusTemp.addEventListener("click", showConversionCelsius);
-*/
