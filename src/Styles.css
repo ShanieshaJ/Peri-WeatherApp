@@ -40,13 +40,18 @@ ul.weather-parameters {
   font-size: 17px;
 }
 
-/* Temperature text and style */
+/* Temperature text, weather icon style */
 #celsius,
 #fahrenheit {
   color: #0d0628;
   text-decoration: none;
   margin: 0 auto;
   font-size: 30px;
+}
+
+#weatherIcon {
+  position: relative;
+  right: 1rem;
 }
 
 #temperatureCircle {
