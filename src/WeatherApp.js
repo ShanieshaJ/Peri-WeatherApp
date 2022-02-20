@@ -24,13 +24,14 @@ function displayCurrentWeatherReport(response) {
   let currentCityName = document.querySelector(".city");
   currentCityName.innerHTML = response.data.name;
   let currentTemperature = document.querySelector(".temperature");
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
   let currentHumdity = document.querySelector("#humidity");
   currentHumdity.innerHTML = Math.round(response.data.main.humidity);
   let currentWind = document.querySelector("#wind");
   currentWind.innerHTML = Math.round(response.data.wind.speed);
   let currentWeatherDescription = document.querySelector(".weather-type");
   currentWeatherDescription.innerHTML = response.data.weather[0].description;
+  celsiusTemperature = response.data.main.temp;
 
   //To display the weather icon for each city searched
   let currentWeatherIcon = document.querySelector("#weatherIcon");
@@ -107,16 +108,18 @@ searchCityInfo("Laflèche");
 function showConversionCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = currentTemperature;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 /* Seventh function change the conversion to fahrenheit by clicking */
 function showConversionFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitConversion = (currentTemperature * 9) / 5 + 32;
+  let fahrenheitConversion = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitConversion);
 }
+
+let celsiusTemperature = null;
 
 /* When fahrenheit (F) is clicked it calls the function */
 let fahrenheitTemp = document.querySelector("#fahrenheit");
