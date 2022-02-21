@@ -45,21 +45,15 @@ ul.weather-parameters {
 #fahrenheit {
   color: #0d0628;
   text-decoration: none;
+  position: relative;
   margin: 0 auto;
-  font-size: 30px;
+  font-size: 15px;
+  bottom: 1.5rem;
 }
 
 #weatherIcon {
   position: relative;
   right: 1rem;
-}
-
-#temperatureCircle {
-  color: #0d0628;
-  text-decoration: none;
-  margin: 0 auto;
-  font-size: 30px;
-  position: absolute;
 }
 
 .temperature {
@@ -156,7 +150,7 @@ ul.weather-parameters {
   position: relative;
   margin: 0 auto;
   top: 2rem;
-  left: 3rem;
+  left: 25rem;
 }
 
 #projectLink {
