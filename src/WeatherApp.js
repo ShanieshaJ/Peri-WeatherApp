@@ -29,6 +29,8 @@ function displayCurrentWeatherReport(response) {
   currentHumdity.innerHTML = Math.round(response.data.main.humidity);
   let currentWind = document.querySelector("#wind");
   currentWind.innerHTML = Math.round(response.data.wind.speed);
+  let currentWindUnit = document.querySelector("#windUnit");
+  currentWindUnit.innerHTML = Math.round(response.data.weather.wind.unit);
   let currentWeatherDescription = document.querySelector(".weather-type");
   currentWeatherDescription.innerHTML = response.data.weather[0].description;
   celsiusTemperature = response.data.main.temp;
@@ -117,6 +119,8 @@ function showConversionFahrenheit(event) {
   let fahrenheitConversion = (celsiusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector(".temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitConversion);
+  let currentWindUnit = document.querySelector("#windUnit");
+  currentWindUnit.innerHTML = Math.round(response.data.weather.wind.unit);
 }
 
 /* Created an variable to set temperature in celsius to null */
