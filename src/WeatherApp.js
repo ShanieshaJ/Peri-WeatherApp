@@ -119,6 +119,7 @@ function showConversionFahrenheit(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitConversion);
 }
 
+/* Created an variable to set temperature in celsius to null */
 let celsiusTemperature = null;
 
 /* When fahrenheit (F) is clicked it calls the function */
