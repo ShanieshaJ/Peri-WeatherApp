@@ -137,7 +137,7 @@ function displayWeatherForecast(response) {
   let forecastHTML = `<div class ="row row-col 5" >`;
 
   forecastApi.forEach(function (forecastDaily, index) {
-    if (index > 0 && index < 7) {
+    if (index < 7) {
       forecastHTML =
         forecastHTML +
         `<div class = "col">
