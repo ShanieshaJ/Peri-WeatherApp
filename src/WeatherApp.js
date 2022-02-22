@@ -159,8 +159,13 @@ function displayWeatherForecast(response) {
   forecastElement.innerHTML = forecastHTML + `</div>`;
 }
 
-/* TESTING BY CALLING THE FUNCTION*/
-displayWeatherForecast();
+/* Ninth function to get the forecast of the city searched, 
+pin the coordinates and then display the forecast */
+function getForecast(coordinates) {
+  let apiKey = "ef67b1869cadffe12a36cdbb72626863";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherForecast);
+}
 
 /* When fahrenheit (F) is clicked it calls the function */
 let fahrenheitTemp = document.querySelector("#fahrenheit");
