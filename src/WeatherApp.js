@@ -29,11 +29,10 @@ function displayCurrentWeatherReport(response) {
   currentHumdity.innerHTML = Math.round(response.data.main.humidity);
   let currentWind = document.querySelector("#wind");
   currentWind.innerHTML = Math.round(response.data.wind.speed);
-  let currentWindUnit = document.querySelector("#windUnit");
-  //currentWindUnit.innerHTML = response.data.wind.gust;
   let currentWeatherDescription = document.querySelector(".weather-type");
   currentWeatherDescription.innerHTML = response.data.weather[0].description;
   celsiusTemperature = response.data.main.temp;
+  windKilo = response.data.wind.speed;
 
   //To display the weather icon for each city searched
   let currentWeatherIcon = document.querySelector("#weatherIcon");
@@ -106,23 +105,39 @@ navigator.geolocation.getCurrentPosition(displayPosition);
 searchCityInfo("Laflèche");
 
 /* Sixth function change the conversion to celsius by clicking */
-
 function showConversionCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  let currentWindUnit = document.querySelector("#windUnit");
+  let celsiusTemp = document.querySelector("#celsius");
+  let currentWindSpeed = document.querySelector("#wind");
+
+  if (celsiusTemp.clicked == true) {
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+    currentWindSpeed.innerHTML = Math.round(windKilo);
+    currentWindUnit.innerHTML = "km/h";
+  }
 }
 
 /* Seventh function change the conversion to fahrenheit by clicking */
 function showConversionFahrenheit(event) {
   event.preventDefault();
   let fahrenheitConversion = (celsiusTemperature * 9) / 5 + 32;
+  let currentWindUnit = document.querySelector("#windUnit");
   let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitConversion);
+  let fahrenheitTemp = document.querySelector("#fahrenheit");
+  let currentWindSpeed = document.querySelector("#wind");
+
+  if (fahrenheitTemp.clicked == true) {
+    temperatureElement.innerHTML = Math.round(fahrenheitConversion);
+    currentWindSpeed.innerHTML = Math.round(windKilo / 1.609344);
+    currentWindUnit.innerHTML = "mph";
+  }
 }
 
-/* Created an variable to set temperature in celsius to null */
+/* Created an variables to set temperature in celsius, wind units to null */
 let celsiusTemperature = null;
+let windKilo = null;
 
 /* When fahrenheit (F) is clicked it calls the function */
 let fahrenheitTemp = document.querySelector("#fahrenheit");
