@@ -133,35 +133,34 @@ let windKilo = null;
 /* Eighth function to display weather forecast */
 function displayWeatherForecast(response) {
   let forecastApi = response.data.daily;
-  let forecastStarter = document.querySelector("#forecast");
-  let forecastHTML = `<div class ="row row-col 5" >`;
-
-  forecastApi.forEach(function (forecastDaily, index) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class ="row" >`;
+  forecastApi.forEach(function (forecastDay, index) {
     if (index < 7) {
-      forecastHTML =
-        forecastHTML +
-        `<div class = "col">
+      forecastHTML += `<div class = "col">
         <div class = "weather-forecast-date">
-          <small>${showCurrentFormatTime(forecastDaily.dt)}</small></div>
+          <small>${showCurrentFormatTime(forecastDay.dt)}</small></div>
           <img src = "http://openweathermap.org/img/wn/${
-            forecastDaily.weather[0].icon
+            forecastDay.weather[0].icon
           }@2px" 
             alt = "weather-icons" width = "60" 
           />
           <div class = "weather-forecast-temperatures">
             <span class = "forecast-temperature-max">
-            <strong>${Math.round(forecastDaily.temp.max)}</strong>
+            <strong>${Math.round(forecastDay.temp.max)}</strong>
             </span> /
             <span class = "forecast-temperature-min">
-            ${Math.round(forecastDaily.temp.min)}
+            ${Math.round(forecastDay.temp.min)}
             </span>
           </div>
         </div>`;
     }
   });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastStarter.innerHTML = forecastHTML;
+  forecastElement.innerHTML = forecastHTML + `</div>`;
 }
+
+/* TESTING BY CALLING THE FUNCTION*/
+displayWeatherForecast();
 
 /* When fahrenheit (F) is clicked it calls the function */
 let fahrenheitTemp = document.querySelector("#fahrenheit");
