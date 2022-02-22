@@ -43,7 +43,7 @@ function displayCurrentWeatherReport(response) {
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)
-function showCurrentFormatTime(date) {
+function showCurrentFormatTime(timestamp) {
   let currentHour = date.getHours();
   let currentMinutes = date.getMinutes();
   if (currentHour > 12) {
@@ -51,6 +51,11 @@ function showCurrentFormatTime(date) {
   } else {
     currentMinutes = `${currentMinutes}`;
   }
+
+  /*Show the current time and day*/
+  let currentDateText = new Date(timestamp * 1000);
+  let currentDateElement = document.querySelector(".date");
+  currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
 
   //Create the array of the days of the week (Modified the days)
   let sevenDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -76,11 +81,6 @@ function showCurrentFormatTime(date) {
 
   return `${sevenDays[currDay]}, ${month} ${currDateNumber} ${currentHour}:${currentMinutes}`;
 }
-
-/*Show the current time and day*/
-let currentDateText = new Date();
-let currentDateElement = document.querySelector(".date");
-currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
 
 /* Once the name of city has been entered 
 and search button has been clicked then city will be searched
@@ -129,6 +129,39 @@ function showConversionFahrenheit(event) {
 /* Created an variables to set temperature in celsius, wind units to null */
 let celsiusTemperature = null;
 let windKilo = null;
+
+/* Eighth function to display weather forecast */
+function displayWeatherForecast(response) {
+  let forecastApi = response.data.daily;
+  let forecastStarter = document.querySelector("#forecast");
+  let forecastHTML = `<div class ="row row-col 5" >`;
+
+  forecastApi.forEach(function (forecastDaily, index) {
+    if (index > 0 && index < 7) {
+      forecastHTML =
+        forecastHTML +
+        `<div class = "col">
+        <div class = "weather-forecast-date">
+          <small>${showCurrentFormatTime(forecastDaily.dt)}</small></div>
+          <img src = "http://openweathermap.org/img/wn/${
+            forecastDaily.weather[0].icon
+          }@2px" 
+            alt = "weather-icons" width = "60" 
+          />
+          <div class = "weather-forecast-temperatures">
+            <span class = "forecast-temperature-max">
+            <strong>${Math.round(forecastDaily.temp.max)}</strong>
+            </span> /
+            <span class = "forecast-temperature-min">
+            ${Math.round(forecastDaily.temp.min)}
+            </span>
+          </div>
+        </div>`;
+    }
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastStarter.innerHTML = forecastHTML;
+}
 
 /* When fahrenheit (F) is clicked it calls the function */
 let fahrenheitTemp = document.querySelector("#fahrenheit");
