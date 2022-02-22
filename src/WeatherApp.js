@@ -109,14 +109,10 @@ function showConversionCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector(".temperature");
   let currentWindUnit = document.querySelector("#windUnit");
-  let celsiusTemp = document.querySelector("#celsius");
   let currentWindSpeed = document.querySelector("#wind");
-
-  if (celsiusTemp.clicked == true) {
-    temperatureElement.innerHTML = Math.round(celsiusTemperature);
-    currentWindSpeed.innerHTML = Math.round(windKilo);
-    currentWindUnit.innerHTML = "km/h";
-  }
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  currentWindSpeed.innerHTML = Math.round(windKilo);
+  currentWindUnit.innerHTML = "km/h";
 }
 
 /* Seventh function change the conversion to fahrenheit by clicking */
@@ -125,16 +121,11 @@ function showConversionFahrenheit(event) {
   let fahrenheitConversion = (celsiusTemperature * 9) / 5 + 32;
   let currentWindUnit = document.querySelector("#windUnit");
   let temperatureElement = document.querySelector(".temperature");
-  let fahrenheitTemp = document.querySelector("#fahrenheit");
   let currentWindSpeed = document.querySelector("#wind");
-
-  if (fahrenheitTemp.clicked == true) {
-    temperatureElement.innerHTML = Math.round(fahrenheitConversion);
-    currentWindSpeed.innerHTML = Math.round(windKilo / 1.609344);
-    currentWindUnit.innerHTML = "mph";
-  }
+  temperatureElement.innerHTML = Math.round(fahrenheitConversion);
+  currentWindSpeed.innerHTML = Math.round(windKilo / 1.609344);
+  currentWindUnit.innerHTML = "mph";
 }
-
 /* Created an variables to set temperature in celsius, wind units to null */
 let celsiusTemperature = null;
 let windKilo = null;
