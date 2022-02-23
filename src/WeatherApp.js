@@ -45,17 +45,18 @@ function displayCurrentWeatherReport(response) {
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)
-function showCurrentFormatTime(date) {
+function showCurrentFormatTime(timestamp) {
   let currentHour = date.getHours();
   let currentMinutes = date.getMinutes();
-  if (currentHour > 12) {
-    currentHour = `${currentHour}`;
-  } else {
-    currentMinutes = `${currentMinutes}`;
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+  if (currentMinutes < 10) {
+    currentMinutes = `0${currentMinutes}`;
   }
 
   /*Show the current time and day*/
-  let currentDateText = new Date();
+  let currentDateText = new Date(timestamp);
   let currentDateElement = document.querySelector(".date");
   currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
 
@@ -80,6 +81,13 @@ function showCurrentFormatTime(date) {
   let month = months[date.getMonth()];
   let currDay = date.getDay();
   let currDateNumber = date.getDate();
+  console.log(
+    sevenDays[currDay],
+    month,
+    currDateNumber,
+    currentHour,
+    currentMinutes
+  );
 
   return `${sevenDays[currDay]}, ${month} ${currDateNumber} ${currentHour}:${currentMinutes}`;
 }
