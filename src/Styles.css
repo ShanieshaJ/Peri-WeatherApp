@@ -10,6 +10,7 @@
   position: relative;
   top: 20px;
   max-width: 700px;
+  max-height: 640px;
 }
 
 /* Text of the weather application */
@@ -67,7 +68,7 @@ li#temperatureDisplay {
   position: relative;
   margin: auto;
   float: right;
-  right: 25rem;
+  right: 24rem;
   top: 2.5rem;
 }
 
@@ -164,8 +165,10 @@ li#temperatureDisplay {
 }
 
 .weather-forecast {
-  margin-top: 40px;
+  margin-top: 10px;
   text-align: center;
+  position: relative;
+  right: 1rem;
 }
 
 .weather-forecast-date {
@@ -186,7 +189,9 @@ li#temperatureDisplay {
   position: relative;
   margin: 0 auto;
   top: 2rem;
-  left: 25rem;
+  left: 1rem;
+  max-width: 700px;
+  max-height: 630px;
 }
 
 #projectLink {
