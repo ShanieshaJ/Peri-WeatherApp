@@ -157,6 +157,11 @@ li#temperatureDisplay {
 }
 
 /* Weather forecast section */
+#forecastList {
+  position: relative;
+  margin: 0 auto;
+}
+
 .weather-forecast {
   margin-top: 40px;
   text-align: center;
