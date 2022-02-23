@@ -45,7 +45,7 @@ function displayCurrentWeatherReport(response) {
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)
-function showCurrentFormatTime(timestamp) {
+function showCurrentFormatTime(date) {
   let currentHour = date.getHours();
   let currentMinutes = date.getMinutes();
   if (currentHour < 10) {
@@ -56,8 +56,8 @@ function showCurrentFormatTime(timestamp) {
   }
 
   /*Show the current time and day*/
-  let currentDateText = new Date(timestamp);
-  let currentDateElement = document.querySelector(".date");
+  let currentDateText = new Date();
+  let currentDateElement = document.querySelector(".dateTime");
   currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
 
   //Create the array of the days of the week (Modified the days)
@@ -81,13 +81,6 @@ function showCurrentFormatTime(timestamp) {
   let month = months[date.getMonth()];
   let currDay = date.getDay();
   let currDateNumber = date.getDate();
-  console.log(
-    sevenDays[currDay],
-    month,
-    currDateNumber,
-    currentHour,
-    currentMinutes
-  );
 
   return `${sevenDays[currDay]}, ${month} ${currDateNumber} ${currentHour}:${currentMinutes}`;
 }
