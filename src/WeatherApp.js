@@ -134,6 +134,7 @@ let windKilo = null;
 
 /* Eighth function to display weather forecast */
 function displayWeatherForecast(response) {
+  console.log(response.data.daily);
   let forecastInfo = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
@@ -168,8 +169,9 @@ function displayWeatherForecast(response) {
 /* Ninth function to get the forecast of the city searched, 
 pin the coordinates and then display the forecast */
 function getForecast(coordinates) {
+  console.log(coordinates);
   let apiKey = "ef67b1869cadffe12a36cdbb72626863";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherForecast);
 }
 
