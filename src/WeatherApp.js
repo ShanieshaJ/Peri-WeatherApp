@@ -45,7 +45,7 @@ function displayCurrentWeatherReport(response) {
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)
-function showCurrentFormatTime(timestamp) {
+function showCurrentFormatTime(date) {
   let currentHour = date.getHours();
   let currentMinutes = date.getMinutes();
   if (currentHour > 12) {
@@ -55,7 +55,7 @@ function showCurrentFormatTime(timestamp) {
   }
 
   /*Show the current time and day*/
-  let currentDateText = new Date(timestamp * 1000);
+  let currentDateText = new Date();
   let currentDateElement = document.querySelector(".date");
   currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
 
@@ -81,7 +81,7 @@ function showCurrentFormatTime(timestamp) {
   let currDay = date.getDay();
   let currDateNumber = date.getDate();
 
-  return `${sevenDays[currDay]}, ${month} ${currDateNumber}  ${currentHour}:${currentMinutes}`;
+  return `${sevenDays[currDay]}, ${month} ${currDateNumber} ${currentHour}:${currentMinutes}`;
 }
 
 /* Once the name of city has been entered 
