@@ -135,10 +135,10 @@ let windKilo = null;
 /* Eighth function to display weather forecast */
 function displayWeatherForecast(response) {
   console.log(response.data.daily);
-  let forecastText = response.data.daily;
+  let forecastInfo = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  forecastText.forEach(function (forecastDay, index) {
+  forecastInfo.forEach(function (forecastDay, index) {
     if (index < 7) {
       forecastHTML =
         forecastHTML +
@@ -149,7 +149,7 @@ function displayWeatherForecast(response) {
           <img src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
           }@2px.png" 
-            alt="weather-icons" width = "42" 
+            alt="" width="42" 
           />
           <div class="weather-forecast-temperatures">
             <span class="forecast-temperature-max">
