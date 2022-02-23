@@ -171,7 +171,6 @@ pin the coordinates and then display the forecast */
 function getForecast(coordinates) {
   let apiKey = "ef67b1869cadffe12a36cdbb72626863";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(displayWeatherForecast);
 }
 
