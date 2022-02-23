@@ -132,17 +132,20 @@ let windKilo = null;
 
 /* Eighth function to display weather forecast */
 function displayWeatherForecast(response) {
-  let forecastApi = response.data.daily;
+  let forecastText = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class ="row" >`;
-  forecastApi.forEach(function (forecastDay, index) {
+  forecastText.forEach(function (forecastDay, index) {
     if (index < 7) {
-      forecastHTML += `<div class = "col">
+      forecastHTML =
+        forecastHTML +
+        `<div class = "col-2">
         <div class = "weather-forecast-date">
-          <small>${showCurrentFormatTime(forecastDay.dt)}</small></div>
+          <small>${forecastDay(forecastDay.dt)}</small>
+        </div>
           <img src = "http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
-          }@2px" 
+          }@2px.png" 
             alt = "weather-icons" width = "60" 
           />
           <div class = "weather-forecast-temperatures">
@@ -156,15 +159,25 @@ function displayWeatherForecast(response) {
         </div>`;
     }
   });
-  forecastElement.innerHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 /* Ninth function to get the forecast of the city searched, 
 pin the coordinates and then display the forecast */
 function getForecast(coordinates) {
   let apiKey = "ef67b1869cadffe12a36cdbb72626863";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherForecast);
+}
+
+/*Tenth function to format the date properly */
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
 }
 
 /* When fahrenheit (F) is clicked it calls the function */
