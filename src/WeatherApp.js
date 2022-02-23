@@ -135,11 +135,10 @@ let windKilo = null;
 /* Eighth function to display weather forecast */
 function displayWeatherForecast(response) {
   let forecastInfo = response.data.daily;
-  console.log(forecastInfo);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecastInfo.forEach(function (forecastDay, index) {
-    if (index < 7) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
         `<div class="col-2">
