@@ -55,11 +55,6 @@ function showCurrentFormatTime(date) {
     currentMinutes = `0${currentMinutes}`;
   }
 
-  /*Show the current time and day*/
-  let currentDateText = new Date();
-  let currentDateElement = document.querySelector(".dateTime");
-  currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
-
   //Create the array of the days of the week (Modified the days)
   let sevenDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
@@ -81,7 +76,6 @@ function showCurrentFormatTime(date) {
   let month = months[date.getMonth()];
   let currDay = date.getDay();
   let currDateNumber = date.getDate();
-
   return `${sevenDays[currDay]}, ${month} ${currDateNumber} ${currentHour}:${currentMinutes}`;
 }
 
@@ -180,6 +174,11 @@ function formatDay(timestamp) {
 
   return days[day];
 }
+
+/*Show the current time and day*/
+let currentDateText = new Date();
+let currentDateElement = document.querySelector(".dateTime");
+currentDateElement.innerHTML = showCurrentFormatTime(currentDateText);
 
 /* When fahrenheit (F) is clicked it calls the function */
 let fahrenheitTemp = document.querySelector("#fahrenheit");
