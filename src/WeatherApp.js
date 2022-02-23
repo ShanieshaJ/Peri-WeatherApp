@@ -40,6 +40,8 @@ function displayCurrentWeatherReport(response) {
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+
+  getForecast(response.data.coords);
 }
 
 //Fifth function to show the current time by displaying the hour and minutes (Modified)
@@ -134,14 +136,14 @@ let windKilo = null;
 function displayWeatherForecast(response) {
   let forecastText = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class ="row" >`;
+  let forecastHTML = `<div class ="row">`;
   forecastText.forEach(function (forecastDay, index) {
     if (index < 7) {
       forecastHTML =
         forecastHTML +
         `<div class = "col-2">
         <div class = "weather-forecast-date">
-          <small>${forecastDay(forecastDay.dt)}</small>
+          <small>${formatDate(forecastDay.dt)}</small>
         </div>
           <img src = "http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
