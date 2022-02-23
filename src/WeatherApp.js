@@ -134,8 +134,8 @@ let windKilo = null;
 
 /* Eighth function to display weather forecast */
 function displayWeatherForecast(response) {
-  console.log(response.data.daily);
   let forecastInfo = response.data.daily;
+  console.log(forecastInfo);
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecastInfo.forEach(function (forecastDay, index) {
