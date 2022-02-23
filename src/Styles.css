@@ -160,6 +160,7 @@ li#temperatureDisplay {
 #forecastList {
   position: relative;
   margin: 0 auto;
+  bottom: 4.5rem;
 }
 
 .weather-forecast {
