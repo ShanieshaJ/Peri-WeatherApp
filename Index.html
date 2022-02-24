@@ -19,102 +19,96 @@
   </head>
   <body>
     <!--- The weather form --->
-    <div class="background-container-image">
-      <div class="container p-5 mt-3 rounded">
+    <div class="bg-image"></div>
+    <div class="container p-5 mt-3 rounded">
+      <div class="col">
+        <form class="search-weather">
+          <div class="input-group mb-3">
+            <input
+              type="search"
+              placeholder="Search any city"
+              autofocus="on"
+              autocomplete="off"
+              class="city-entry"
+            />
+            <button type="submit" id="search-city">
+              <i class="fas fa-search-location"></i>
+            </button>
+            <button type="submit" id="current-location">
+              <i class="fas fa-location-arrow"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+      <!--- The temperature information --->
+      <div class="row">
         <div class="col">
-          <form class="search-weather">
-            <div class="input-group mb-3">
-              <input
-                type="search"
-                placeholder="Search any city"
-                autofocus="on"
-                autocomplete="off"
-                class="city-entry"
-              />
-              <button type="submit" id="search-city">
-                <i class="fas fa-search-location"></i>
-              </button>
-              <button type="submit" id="current-location">
-                <i class="fas fa-location-arrow"></i>
-              </button>
-            </div>
-          </form>
-        </div>
-        <!--- The temperature information --->
-        <div class="row">
-          <div class="col">
-            <div class="top">
-              <div class="col">
-                <div class="row-6">
-                  <ul>
-                    <li id="currentWeatherUpdate">
-                      Last updated on: <span class="dateTime"></span>
-                    </li>
-                    <li>
-                      <i class="fas fa-map-marker"></i>
-                      <span class="city"></span>
-                    </li>
-                    <img
-                      src=""
-                      alt="icon"
-                      id="weatherIcon"
-                      class="float-left"
-                    />
-                    <li id="temperatureDisplay">
-                      <span class="temperature">º</span>
-                      <a href="#" id="celsius"> ºC /</a>
-                      <a href="#" id="fahrenheit"> ºF</a>
-                    </li>
-                  </ul>
-                </div>
+          <div class="top">
+            <div class="col">
+              <div class="row-6">
+                <ul>
+                  <li id="currentWeatherUpdate">
+                    Last updated on: <span class="dateTime"></span>
+                  </li>
+                  <li>
+                    <i class="fas fa-map-marker"></i>
+                    <span class="city"></span>
+                  </li>
+                  <img src="" alt="icon" id="weatherIcon" class="float-left" />
+                  <li id="temperatureDisplay">
+                    <span class="temperature">º</span>
+                    <a href="#" id="celsius"> ºC /</a>
+                    <a href="#" id="fahrenheit"> ºF</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <!--- The weather information --->
-        <div class="row">
-          <div class="col">
-            <div class="weather-card-two">
-              <span class="parameters">
-                <ul class="weather-parameters">
-                  <li><span class="weather-type"></span></li>
-                  <li>
-                    <i class="fas fa-tint"></i> Humidity:
-                    <span id="humidity"></span>%
-                  </li>
-                  <li>
-                    <i class="fas fa-wind"></i> Wind: <span id="wind"></span>
-                    <span id="windUnit"> km/h</span>
-                  </li>
-                  <li>
-                    <img
-                      src="Images/sunrise.svg"
-                      alt="sunrise"
-                      class="sunrise-icon"
-                    />
-                    Sunrise:
-                    <span id="sunriseInfo"></span>
-                  </li>
-                  <li>
-                    <img
-                      src="Images/sunset.svg"
-                      alt="sunset"
-                      class="sunset-icon"
-                    />
-                    Sunset:
-                    <span id="sunsetInfo"></span>
-                  </li>
-                </ul>
-              </span>
-            </div>
+      </div>
+      <!--- The weather information --->
+      <div class="row">
+        <div class="col">
+          <div class="weather-card-two">
+            <span class="parameters">
+              <ul class="weather-parameters">
+                <li><span class="weather-type"></span></li>
+                <li>
+                  <i class="fas fa-tint"></i> Humidity:
+                  <span id="humidity"></span>%
+                </li>
+                <li>
+                  <i class="fas fa-wind"></i> Wind: <span id="wind"></span>
+                  <span id="windUnit"> km/h</span>
+                </li>
+                <li>
+                  <img
+                    src="Images/sunrise.svg"
+                    alt="sunrise"
+                    class="sunrise-icon"
+                  />
+                  Sunrise:
+                  <span id="sunriseInfo"></span>
+                </li>
+                <li>
+                  <img
+                    src="Images/sunset.svg"
+                    alt="sunset"
+                    class="sunset-icon"
+                  />
+                  Sunset:
+                  <span id="sunsetInfo"></span>
+                </li>
+              </ul>
+            </span>
           </div>
         </div>
-        <!--- Weather forecast section --->
-        <section id="forecastList">
-          <span id="forecastTitle">Next 6 days: </span>
-          <div class="weather-forecast" id="forecast"></div>
-        </section>
       </div>
+      <!--- Weather forecast section --->
+      <section id="forecastList">
+        <span id="forecastTitle">Next 6 days: </span>
+        <div class="weather-forecast" id="forecast"></div>
+      </section>
     </div>
     <script src="src/WeatherApp.js"></script>
 
