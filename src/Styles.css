@@ -9,13 +9,14 @@
   font-weight: 400;
   margin: 0 auto;
   position: relative;
-  top: 20px;
+  top: 0.1rem;
   max-width: 700px;
-  max-height: 673px;
+  max-height: 695px;
 }
 
 /* Text of the weather application */
 body {
+  font-family: "Dosis", sans-serif;
   color: #d9dbf1;
 }
 
@@ -170,7 +171,7 @@ li#temperatureDisplay {
 #forecastList {
   position: relative;
   margin: 0 auto;
-  bottom: 5.5rem;
+  bottom: 9.5rem;
 }
 
 .weather-forecast {
