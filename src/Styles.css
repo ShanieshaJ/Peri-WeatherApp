@@ -136,7 +136,7 @@ li#temperatureDisplay {
   margin: 0 auto;
   float: right;
   right: 11.5rem;
-  bottom: 6.5rem;
+  bottom: 7.5rem;
 }
 
 .city-entry {
@@ -161,7 +161,7 @@ li#temperatureDisplay {
 #forecastList {
   position: relative;
   margin: 0 auto;
-  bottom: 4.5rem;
+  bottom: 5.5rem;
 }
 
 .weather-forecast {
