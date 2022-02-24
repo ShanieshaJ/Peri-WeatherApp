@@ -142,34 +142,6 @@ function showConversionCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
   currentWindSpeed.innerHTML = Math.round(windKilo);
   currentWindUnit.innerHTML = "km/h";
-
-  let forecastInfo = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  forecastInfo.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
-        `<div class="col-2">
-        <div class="weather-forecast-date">
-          ${formatDay(forecastDay.dt)}
-        </div>
-        <img src= "http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
-        }@2x.png" alt="" id="weather-forecast-icons" width="100" />
-          <div class="weather-forecast-temperatures">
-            <span class="forecast-temperature-max">
-            <strong>${Math.round(forecastDay.temp.max)}°</strong>
-            </span> /
-            <span class="forecast-temperature-min">
-            ${Math.round(forecastDay.temp.min)}°
-            </span>
-          </div>
-        </div>`;
-    }
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
 }
 
 /* Seventh function change the conversion to fahrenheit by clicking */
@@ -182,34 +154,6 @@ function showConversionFahrenheit(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitConversion);
   currentWindSpeed.innerHTML = Math.round(windKilo / 1.609344);
   currentWindUnit.innerHTML = "mph";
-
-  let forecastInfo = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  forecastInfo.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
-        `<div class="col-2">
-        <div class="weather-forecast-date">
-          ${formatDay(forecastDay.dt)}
-        </div>
-        <img src= "http://openweathermap.org/img/wn/${
-          forecastDay.weather[0].icon
-        }@2x.png" alt="" id="weather-forecast-icons" width="100" />
-          <div class="weather-forecast-temperatures">
-            <span class="forecast-temperature-max">
-            <strong>${Math.round(forecastDay.temp.max * 9) / 5 + 32}°</strong>
-            </span> /
-            <span class="forecast-temperature-min">
-            ${Math.round(forecastDay.temp.min * 9) / 5 + 32}°
-            </span>
-          </div>
-        </div>`;
-    }
-  });
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
 }
 
 /* Created an variables to set temperature in celsius, wind units to null */
