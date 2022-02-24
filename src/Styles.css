@@ -2,14 +2,13 @@
 
 /* Border and background of the application */
 .container {
-  background-color: rgba(0.2, 0.5, 0.3, 0.3);
+  background-color: rgba(0.2, 0, 0, 0.1);
   z-index: 2;
   border: #f1f1f1 solid 2px;
   box-shadow: 10px 10px 25px 1.5px #010101;
   font-weight: 400;
   margin: 0 auto;
   position: relative;
-  top: 0.1rem;
   max-width: 700px;
   max-height: 695px;
 }
@@ -29,13 +28,13 @@ body {
 }
 
 .city {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .date,
 #currentWeatherUpdate {
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .weather-type {
@@ -66,6 +65,7 @@ ul.weather-parameters {
   width: 100;
   position: relative;
   right: 1rem;
+  filter: drop-shadow(0 0 0.5rem rgba(131, 129, 130, 0.815));
 }
 
 .temperature {
@@ -182,11 +182,11 @@ li#temperatureDisplay {
 }
 
 span#forecastTitle {
-  font-size: 19px;
+  font-size: 25px;
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 20px;
   color: #dbddf2;
 }
 
@@ -201,6 +201,7 @@ span#forecastTitle {
 img#weather-forecast-icons {
   position: relative;
   right: 0.5rem;
+  filter: drop-shadow(0 0 0.5rem rgba(131, 129, 130, 0.815));
 }
 
 /* Footer section for the bottom of the page */
