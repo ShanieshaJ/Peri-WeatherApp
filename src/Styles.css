@@ -2,7 +2,7 @@
 
 /* Border and background of the application */
 .container {
-  background-image: url(Peri-WeatherApp/Images/Galaxy.jpg);
+  background-image: url(../Images/Galaxy.jpg);
   border: #8e9dcc solid 2px;
   box-shadow: 10px 10px 25px 7px #7d84b2;
   font-weight: 400;
