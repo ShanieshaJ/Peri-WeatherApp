@@ -48,7 +48,7 @@ function displayCurrentWeatherReport(response) {
   let sunsetTime = new Date(response.data.sys.sunset * 1000);
 
   let currentSunriseHours = sunriseTime.getHours();
-  let currentSunriseMinutes = sunrise.getMinutes();
+  let currentSunriseMinutes = sunriseTime.getMinutes();
 
   if (currentSunriseHours < 10) {
     currentSunriseHours = `0${currentSunriseHours}`;
@@ -61,7 +61,7 @@ function displayCurrentWeatherReport(response) {
   sunriseElement.innerHTML = `${currentSunriseHours}:${currentSunriseMinutes}`;
 
   let currentSunsetHours = sunsetTime.getHours();
-  let currentSunsetMinutes = sunset.getMinutes();
+  let currentSunsetMinutes = sunsetTime.getMinutes();
 
   if (currentSunsetHours < 10) {
     currentSunsetHours = `0${currentSunsetHours}`;
