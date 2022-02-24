@@ -2,10 +2,10 @@
 
 /* Border and background of the application */
 .container {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0.2, 0.5, 0.3, 0.3);
   z-index: 2;
   border: #f1f1f1 solid 2px;
-  box-shadow: 10px 10px 25px #7d84b2;
+  box-shadow: 10px 10px 25px 1.5px #010101;
   font-weight: 400;
   margin: 0 auto;
   position: relative;
@@ -20,7 +20,7 @@ body {
 }
 
 .bg-image {
-  background-image: url(../Images/Galaxy.jpg);
+  background-image: url(../Images/free-nature-stock.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,11 +53,11 @@ ul.weather-parameters {
 /* Temperature text, weather icon style */
 #celsius,
 #fahrenheit {
-  color: #0d0628;
+  color: #d9dbf1;
   text-decoration: none;
   position: relative;
   margin: 0 auto;
-  font-size: 15px;
+  font-size: 20px;
   bottom: 1.5rem;
 }
 
@@ -181,7 +181,7 @@ li#temperatureDisplay {
 }
 
 span#forecastTitle {
-  font-size: 17px;
+  font-size: 19px;
 }
 
 .weather-forecast-date {
@@ -212,4 +212,5 @@ img#weather-forecast-icons {
 
 .projectLink {
   text-decoration: none;
+  color: #dbddf2;
 }
