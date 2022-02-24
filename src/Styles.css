@@ -2,7 +2,7 @@
 
 /* Border and background of the application */
 .container {
-  background: linear-gradient(91.3deg, #7d84b2 1.5%, #d9dbf1 100.3%);
+  background-image: url("Galaxy.jpg");
   border: #8e9dcc solid 2px;
   box-shadow: 10px 10px 25px 7px #7d84b2;
   font-weight: 400;
@@ -15,8 +15,8 @@
 
 /* Text of the weather application */
 body {
+  background: linear-gradient(91.3deg, #7d84b2 1.5%, #d9dbf1 100.3%);
   color: #0d0628;
-  background: #d9dbf1;
 }
 .city {
   font-size: 20px;
@@ -136,7 +136,7 @@ li#temperatureDisplay {
   margin: 0 auto;
   float: right;
   right: 11.5rem;
-  bottom: 6.5rem;
+  bottom: 7.5rem;
 }
 
 .city-entry {
@@ -161,7 +161,7 @@ li#temperatureDisplay {
 #forecastList {
   position: relative;
   margin: 0 auto;
-  bottom: 4.5rem;
+  bottom: 5.5rem;
 }
 
 .weather-forecast {
