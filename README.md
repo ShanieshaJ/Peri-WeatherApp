@@ -1,6 +1,10 @@
-#Peri Weather App 🌎
+<header>
+<h1> Peri Weather App 🌎</h1>
+</header>
 
-##Overview:
+<section>
+<h2>Overview:</h2>
+</section>
 
 <p> This project is made from the bootcamp course called SheCodes Plus. This course has HTML/CSS & JavaScript but with more information to learn. I learnt from this course is that you have to create a design (Wireframe) for a weather application using InVision software. Then used CodeSandBox to code mini JavaScript execises to understand. The first 4 weeks we would slowly build the weather application in CodeSandBox. </p>
 
@@ -19,12 +23,9 @@ git push
 git pull
 ```
 
----
-
 Then is Introduction to API (Application Programming Interface) and what it does:</p>
-<img src="https://www.altexsoft.com/media/2021/03/word-image.png" alt ="api-info"/>
-
----
+<br/><img src="https://www.altexsoft.com/media/2021/03/word-image.png" alt ="api-info"/>
+</br>
 
  <p>
   Finally we had to transfer (copy and paste) the code from CodeSandBox to Visual Studio Code. However some parts of code work differently those two software.
@@ -67,29 +68,32 @@ Code on Visual Studio Code:
    <section id="developerFooter">
 ```
 
-## </p>
+ </p>
 
  <p>
 
-    The differences between these two software used is on CodeSandbox is that the `link` & `script` tags are inside the `head` tag only and it uses the environment called parcel to bulid the application. On Visual Studio Code: The `<link>` and `<script>` tags are mostly placed inside the `<head>` tag. However the `<script src="src/WeatherApp.js>` (Which is your personal JS file) is almost at the bottom of the page. The reason for this is because the parcel is not added into Visual Studio Code. But it reduces the loading time of the application.
+    The differences between these two software used is on CodeSandbox is that the `link` & `script` tags are inside the `head` tag only and it uses the environment called parcel to bulid the application. On Visual Studio Code: The `<link>` and `<script>` tags are mostly placed inside the `<head>` tag. However the `<script src="src/WeatherApp.js>` tag (Which is your personal JS file) is almost at the bottom of the page. The reason for this is because the parcel is not added into Visual Studio Code. But it reduces the loading time of the application.
 
-## </p>
+ </p>
 
-##Languages used:
+<section>
+<h2>Languages used:</h2>
+</section>
 
-## <p>The languages used to create this weather application are: HTML5/CSS3 & JavaScript. The framework used is Bootstrap. The API used to be able to search and update city location and temperatures is from <a href="https://openweathermap.org/api">OpenWeatherMap.org</a>.</p>
+<p>The languages used to create this weather application are: HTML5/CSS3 & JavaScript. The framework used is Bootstrap. The API used to be able to search and update city location and temperatures is from <a href="https://openweathermap.org/api">OpenWeatherMap.org</a>.</p>
 
-##Learn more:
+<section>
+<h2>Learn more:</h2>
+</section>
+<ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript</a></li>
+    <li><a href ="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub">Git</a></li>
+    <li><a href ="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap</a></li>
+    <li><a href = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">API</a></li>
+    <li><a href ="https://parceljs.org/docs/">Parcel</a></li>
+</ul>
 
-    - <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a>
-    - <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS">CSS</a>
-    - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">JavaScript</a>
-    - <a href ="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/GitHub">Git</a>
-    - <a href ="https://getbootstrap.com/docs/5.1/getting-started/introduction/">Bootstrap</a>
-    - <a href = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">API</a>
-    - <a href ="https://parceljs.org/docs/">Parcel</a>
-
----
-
-###Link:
-You can view the project by clicking this link here: <a href ="https://ecstatic-shirley-3303d9.netlify.app/">Peri Weather App</a>
+<h3>Link:</h3>
+<p>You can view the project by clicking this link here: <a href ="https://ecstatic-shirley-3303d9.netlify.app/">Peri Weather App</a></p>
