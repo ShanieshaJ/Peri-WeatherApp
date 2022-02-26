@@ -72,7 +72,13 @@ Code on Visual Studio Code:
 
  <p>
 
-    The differences between these two software used is on CodeSandbox is that the `link` & `script` tags are inside the `head` tag only and it uses the environment called parcel to bulid the application. On Visual Studio Code: The `<link>` and `<script>` tags are mostly placed inside the `<head>` tag. However the `<script src="src/WeatherApp.js>` tag (Which is your personal JS file) is almost at the bottom of the page. The reason for this is because the parcel is not added into Visual Studio Code. But it reduces the loading time of the application.
+    The differences between these two software used is on CodeSandbox is that the `<link>` & `<script>` tags are inside the `<head>` tag only and it uses the environment called parcel to bulid the application.
+
+</p> 
+    
+<p>
+
+    On Visual Studio Code: The `<link>` and `<script>` tags are mostly placed inside the `<head>` tag. However the <script src="src/WeatherApp.js> tag (Which is your personal JS file) is almost at the bottom of the page. The reason for this is because the parcel is not added into Visual Studio Code. But it reduces the loading time of the application.
 
  </p>
 
