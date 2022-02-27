@@ -88,7 +88,7 @@ Code on Visual Studio Code:
   <link>
   <script>  
   ```     
- These two tags are mostly placed inside the `<head>` tag. However the `<script src="src/WeatherApp.js">` tag (Which is your personal JS file) is almost at the bottom of the page. The reason for this is because the parcel is not added into Visual Studio Code. But it reduces the loading time of the application.
+ These two tags are mostly placed inside the `<head>` tag. However the `<script src="src/WeatherApp.js">` tag (Which is your personal JS file) is almost at the bottom of the page but inside the `<body>`. The reason for this is because the parcel is not added into Visual Studio Code. But it reduces the loading time of the application.
  
  </p>
 
@@ -99,7 +99,7 @@ Code on Visual Studio Code:
 <p>The languages used to create this weather application are: HTML5/CSS3 & JavaScript. The framework used is Bootstrap. The API used to be able to search and update city location and temperatures is from <a href="https://openweathermap.org/api">OpenWeatherMap.org</a>.</p>
 
 <section>
-<h2>Learn more:</h2>
+<h3>Learn more:</h3>
 </section>
 <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a></li>
