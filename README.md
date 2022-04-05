@@ -99,7 +99,7 @@ Code on Visual Studio Code:
 <p>The languages used to create this weather application are: HTML5/CSS3 & JavaScript. The framework used is Bootstrap. The API used to be able to search and update city location and temperatures is from <a href="https://openweathermap.org/api">OpenWeatherMap.org</a>.</p>
 
 <section>
-<h3>Learn more:</h3>
+<h3>Learn more</h3>
 </section>
 <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a></li>
@@ -111,5 +111,5 @@ Code on Visual Studio Code:
     <li><a href ="https://parceljs.org/docs/">Parcel</a></li>
 </ul>
 
-<h3>Link:</h3>
+<h3>Link</h3>
 <p>You can view the project by clicking this link here: <a href ="https://ecstatic-shirley-3303d9.netlify.app/">Peri Weather App</a></p>
