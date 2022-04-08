@@ -110,6 +110,15 @@ Code on Visual Studio Code:
     <li><a href = "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">API</a></li>
     <li><a href ="https://parceljs.org/docs/">Parcel</a></li>
 </ul>
+   
+ <section>
+<h3>Things to improve on this project</h3>
+</section>
+   <ul>
+    <li>Fix the background-image width</li>
+    <li>Add calculation to temperature to C to F when clicked</li>
+    <li>Modify the code</li>
+   </ul>
 
 <h3>Link</h3>
 <p>You can view the project by clicking this link here: <a href ="https://ecstatic-shirley-3303d9.netlify.app/">Peri Weather App</a></p>
