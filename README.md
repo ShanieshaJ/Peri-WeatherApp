@@ -8,7 +8,7 @@
 
 <p> This project is made from the bootcamp course called SheCodes Plus. This course has HTML/CSS & JavaScript but with more information to learn. I learnt from this course is that you have to create a design (Wireframe) for a weather application using InVision software. Then used CodeSandBox to code mini JavaScript execises to understand. The first 4 weeks we would slowly build the weather application in CodeSandBox. </p>
 
-<p> The last 4 weeks is where I discovered that I have been just using GitHub and not Git (The holy grail version control for all developers). I  also learned how to use Git from taking a <strong style = "color:yellow;">Free</strong> course from Udemy called <a href="https://www.udemy.com/course/git-essentials-mini-course/">Git Essentials: Mini Course</a>. At first I was very overwhelmed with the amount of commands that I had to remember when working with projects but it gets better with time and practice.
+<p> The last 4 weeks is where I discovered that I have been just using GitHub and not Git (The holy grail version control for all developers). I  also learned how to use Git from taking a <strong>Free</strong> course from Udemy called <a href="https://www.udemy.com/course/git-essentials-mini-course/">Git Essentials: Mini Course</a>. At first I was very overwhelmed with the amount of commands that I had to remember when working with projects but it gets better with time and practice.
 
 The most important commands to remember are:
 
@@ -99,7 +99,7 @@ Code on Visual Studio Code:
 <p>The languages used to create this weather application are: HTML5/CSS3 & JavaScript. The framework used is Bootstrap. The API used to be able to search and update city location and temperatures is from <a href="https://openweathermap.org/api">OpenWeatherMap.org</a>.</p>
 
 <section>
-<h3>Learn more</h3>
+<h3>Learn more:</h3>
 </section>
 <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML">HTML</a></li>
@@ -112,13 +112,13 @@ Code on Visual Studio Code:
 </ul>
    
  <section>
-<h3>Things to improve on this project</h3>
+<h3>Things to improve on this project:</h3>
 </section>
    <ul>
     <li>Fix the background-image width</li>
-    <li>Add calculation to temperature to C to F when clicked</li>
-    <li>Modify the code</li>
+    <li>Add calculation to convert temperatures from C to F when clicked</li>
+    <li>Modify the code to being more clean</li>
    </ul>
 
-<h3>Link</h3>
+<h3>Link:</h3>
 <p>You can view the project by clicking this link here: <a href ="https://ecstatic-shirley-3303d9.netlify.app/">Peri Weather App</a></p>
