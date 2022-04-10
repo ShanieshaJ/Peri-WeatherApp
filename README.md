@@ -115,9 +115,9 @@ Code on Visual Studio Code:
 <h3>Things to improve on this project:</h3>
 </section>
    <ul>
-    <li>Fix the background-image width</li>
-    <li>Add calculation to convert temperatures from C to F when clicked</li>
-    <li>Modify the code to being more clean</li>
+    <li>Fix the background-image width (In process)</li>
+    <li>Add calculation to convert temperatures from C to F when clicked (In process)</li>
+    <li>Modify the code to being more clean (In process)</li>
    </ul>
 
 <h3>Link:</h3>
