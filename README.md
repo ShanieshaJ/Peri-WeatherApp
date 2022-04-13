@@ -118,6 +118,7 @@ Code on Visual Studio Code:
     <li>Fix the background-image width (In process)</li>
     <li>Add calculation to convert temperatures from C to F when clicked (In process)</li>
     <li>Modify the code to being more clean (In process)</li>
+    <li>Change the background (In process)</li>
    </ul>
 
 <h3>Link:</h3>
