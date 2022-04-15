@@ -112,7 +112,7 @@ Code on Visual Studio Code:
 </ul>
    
  <section>
-<h3>Things to improve on this project (April 14 to 18):</h3>
+<h3>Things to improve on this project (April 15 to 19):</h3>
 </section>
    <ul>
     <li>Fix the background-image width (In process)</li>
