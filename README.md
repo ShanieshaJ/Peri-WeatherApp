@@ -111,15 +111,5 @@ Code on Visual Studio Code:
     <li><a href ="https://parceljs.org/docs/">Parcel</a></li>
 </ul>
    
- <section>
-<h3>Things to improve on this project (April 15 to 19):</h3>
-</section>
-   <ul>
-    <li>Fix the background-image width (In process)</li>
-    <li>Add calculation to convert temperatures from C to F when clicked (In process)</li>
-    <li>Modify the code to being more clean (In process)</li>
-    <li>Change the background (In process)</li>
-   </ul>
-
 <h3>Link:</h3>
 <p>You can view the project by clicking this link here: <a href ="https://ecstatic-shirley-3303d9.netlify.app/">Peri Weather App</a></p>
